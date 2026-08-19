@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Career Compass | Find Your Direction After 12th</title>
+<meta name="description" content="A transparent career direction assessment for students after Class 12.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+:root{--navy:#0b1730;--blue:#2764d8;--blue2:#4b83f1;--sky:#eaf2ff;--bg:#f7f9fc;--card:#fff;--ink:#162033;--muted:#667085;--line:#e5e9f0;--green:#147a4b;--greenbg:#eaf7f0;--gold:#a36b08;--goldbg:#fff7e5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif}
+header{height:74px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 7%;position:sticky;top:0;z-index:20}.brand{font-family:Manrope;font-weight:800;font-size:21px;color:var(--navy)}.brand span{color:var(--blue)}.navtrust{display:flex;gap:16px;align-items:center;font-size:12px;color:var(--muted)}.navtrust b{color:var(--green)}
+.hero{background:linear-gradient(135deg,#f7faff 0%,#edf4ff 52%,#f8fbff 100%);border-bottom:1px solid var(--line);padding:72px 20px 58px}.hero-inner{max-width:1080px;margin:auto}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid #cfdcf2;background:#fff;border-radius:99px;font-size:12px;color:#53627a;font-weight:700}.shield{width:17px;height:17px;border-radius:50%;display:grid;place-items:center;background:var(--greenbg);color:var(--green);font-size:10px}.hero h1{font-family:Manrope;font-size:clamp(39px,6vw,66px);line-height:1.04;letter-spacing:-3px;max-width:850px;margin:18px 0 14px;color:var(--navy)}.hero h1 span{color:var(--blue)}.hero p{max-width:690px;color:#59667a;font-size:17px;line-height:1.65;margin:0}.trustrow{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}.trustpill{background:#fff;border:1px solid #dce4f0;border-radius:10px;padding:9px 12px;font-size:12px;color:#4d5b70}.trustpill b{color:var(--navy)}
+.wrap{max-width:900px;margin:-28px auto 55px;padding:0 18px;position:relative}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 18px 50px #19345b12;overflow:hidden}.inner{padding:30px}.intro{text-align:center}.compass{width:74px;height:74px;margin:0 auto;border-radius:20px;background:var(--navy);display:grid;place-items:center;color:#fff;font-size:34px;box-shadow:0 10px 25px #0b173025}.intro h2,.results h2{font-family:Manrope;font-size:31px;letter-spacing:-1.2px;margin:20px 0 7px}.muted{color:var(--muted)}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;text-align:left;margin:25px 0}.feature{padding:16px;border:1px solid var(--line);border-radius:15px;background:#fbfcfe}.feature b{display:block;margin-bottom:4px;font-size:14px}.feature small{color:var(--muted);line-height:1.5}.btn{border:0;border-radius:11px;padding:12px 18px;font-weight:700;cursor:pointer;font-family:inherit}.primary{background:var(--blue);color:#fff;box-shadow:0 7px 16px #2764d825}.primary:hover{background:#2059c6}.secondary{background:#fff;border:1px solid var(--line);color:#344054}.dark{background:var(--navy);color:#fff}
+.notice{display:flex;gap:10px;align-items:flex-start;padding:13px 14px;border:1px solid #dbe5f5;background:#f7faff;border-radius:13px;color:#53627a;font-size:12px;text-align:left;margin-top:18px}.notice b{color:var(--navy)}
+.topline{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.meta{font-size:11px;font-weight:800;letter-spacing:1px;color:#41639b}.counter{font-size:12px;color:var(--muted)}.progress{height:6px;background:#edf0f5;border-radius:99px;overflow:hidden}.bar{height:100%;background:var(--blue);transition:.3s}.question{font-family:Manrope;font-size:25px;line-height:1.25;margin:24px 0 20px}.options{display:grid;gap:10px}.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:#fff;border:1px solid var(--line);color:var(--ink);border-radius:13px;padding:14px;cursor:pointer;transition:.18s}.opt:hover{border-color:#a9bee8;background:#f8fbff}.opt.sel{border:1.5px solid var(--blue);background:#f2f6ff}.letter{width:28px;height:28px;border-radius:8px;background:#f1f3f7;color:#667085;display:grid;place-items:center;font-size:12px;font-weight:800}.sel .letter{background:#dce8ff;color:var(--blue)}.nav{display:flex;justify-content:space-between;margin-top:22px;gap:10px}
+.results .summary{background:linear-gradient(135deg,#f3f7ff,#fff);border:1px solid #dce7f8;border-radius:18px;padding:19px;margin:20px 0}.level{display:inline-flex;padding:6px 9px;border-radius:99px;background:var(--greenbg);color:var(--green);font-size:11px;font-weight:800}.result{border:1px solid var(--line);border-radius:17px;padding:18px;margin:11px 0;background:#fff}.result.best{border:1.5px solid #9bb7ea}.rhead{display:flex;justify-content:space-between;gap:10px}.rank{font-size:11px;letter-spacing:.8px;color:#41639b;font-weight:800}.why{color:var(--muted);margin:8px 0 12px;line-height:1.55}.tags{display:flex;gap:7px;flex-wrap:wrap}.tag{font-size:11px;border-radius:99px;padding:5px 9px;background:#f3f5f8;color:#59667a}.section{margin-top:24px}.section h3{font-family:Manrope;font-size:19px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.box{border:1px solid var(--line);border-radius:15px;padding:16px;background:#fbfcfe}.box b{font-size:14px}.box p,.box li{color:var(--muted);font-size:13px;line-height:1.6}.box ul{padding-left:18px;margin-bottom:0}.note{padding:14px;border-radius:14px;border:1px solid #ead9ad;background:var(--goldbg);color:#76520d;font-size:13px;line-height:1.55}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+footer{border-top:1px solid var(--line);background:#fff;padding:24px 20px;text-align:center;color:#8992a3;font-size:12px}footer b{color:#4c586b}
+@media(max-width:650px){header{padding:0 18px}.navtrust span{display:none}.hero{padding:50px 20px 48px}.hero h1{letter-spacing:-2px}.wrap{margin-top:-18px}.inner{padding:21px}.features,.grid{grid-template-columns:1fr}.question{font-size:21px}.intro h2,.results h2{font-size:27px}}
+</style>
+
+<style>
+/* Career Compass — College Finder add-on (V4 preserved) */
+.cc-college-finder{margin-top:26px;padding:20px;border:1px solid #dce5f3;background:#f8fbff;border-radius:18px}
+.cc-college-finder h3{margin:0 0 5px;font-family:Manrope,Inter,sans-serif}
+.cc-college-finder .cc-sub{color:#667085;font-size:13px;margin:0 0 15px}
+.cc-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cc-field{width:100%;padding:11px 12px;border:1px solid #d9e0ea;border-radius:10px;background:#fff;color:#172033;font:inherit}
+.cc-find{margin-top:12px}
+.cc-college{background:#fff;border:1px solid #e1e6ee;border-radius:14px;padding:14px;margin-top:10px}
+.cc-college h4{margin:4px 0 3px}
+.cc-meta{color:#667085;font-size:12px}
+.cc-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.cc-chip{font-size:11px;background:#f1f4f8;color:#566274;padding:4px 8px;border-radius:99px}
+.cc-note{font-size:11px;color:#667085;margin-top:12px;line-height:1.5}
+@media(max-width:650px){.cc-fields{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<div class="brand">Career<span>Compass</span> 🧭</div>
+<div class="navtrust"><span>Transparent matching</span><span>🔒 <b>Privacy-first</b></span></div>
+</header>
+
+<section class="hero">
+<div class="hero-inner">
+<div class="eyebrow"><span class="shield">✓</span> Designed for students after Class 12</div>
+<h1>Not sure what to do after 12th?<br><span>Start with yourself.</span></h1>
+<p>Career Compass helps you narrow down your direction using your interests, strengths, work style and goals — without overwhelming you with a giant list of courses.</p>
+<div class="trustrow">
+<div class="trustpill">✓ <b>Transparent</b> scoring</div>
+<div class="trustpill">✓ Only <b>3 directions</b></div>
+<div class="trustpill">✓ No “guaranteed career” claims</div>
+<div class="trustpill">✓ Verify important facts officially</div>
+</div>
+</div>
+</section>
+
+<main class="wrap"><div class="card"><div class="inner" id="app"></div></div></main>
+
+<footer>Career Compass · An educational guidance prototype · <b>Developer: Vineet Sharma</b><br><span>Guidance support only. Always verify admissions, eligibility, fees and career requirements from official sources.</span></footer>
+
+<script>
+const Q=[
+["stream","What did you study in Class 12?",["Science","Commerce","Arts / Humanities","Vocational / Other"]],
+["interest","Which activity naturally keeps your attention?",["Coding, technology & gadgets","Business, money & planning","People, society & communication","Design, writing & creativity","Machines, electronics & practical work"]],
+["strength","What are you usually strongest at?",["Logic, maths & problem solving","Communication & explaining","Creative ideas & visual thinking","Planning, organising & leadership","Hands-on building / fixing"]],
+["work","Which work environment sounds best?",["Computer / technology based","Business / corporate","Field / practical","People-facing","Creative / media"]],
+["goal","What matters most right now?",["Long-term growth","Getting job-ready sooner","Affordable education","Professional qualification","Business / freelancing"]],
+["study","How do you feel about further study?",["4+ years is fine","2–3 years is comfortable","Prefer shorter skill-based routes","Not sure yet"]],
+["style","When something is difficult, you usually...",["Break it into logical steps","Ask people and discuss it","Try a creative approach","Plan and organise first","Learn by doing"]],
+["impact","What kind of work would feel meaningful?",["Build useful technology","Grow/manage a business","Help people directly","Create ideas/content","Solve real-world technical problems"]],
+["confidence","How clear are you about your career today?",["I have one clear option","I have 2–3 options","I have no idea","I keep changing my mind"]]
+];
+
+const C=[
+["Technology & Software",["Science","Commerce","Arts / Humanities","Vocational / Other"],["tech","logic","growth"],"Your answers show a strong connection with digital problem-solving and technology.","Try one beginner coding/web task before choosing a specific course."],
+["Business & Management",["Commerce","Science","Arts / Humanities","Vocational / Other"],["business","people","growth"],"Your profile points toward planning, communication, business thinking and leadership.","Try a small business, sales or marketing activity and see how it feels."],
+["Practical Technology / IoT",["Science","Vocational / Other"],["practical","tech","logic"],"You appear comfortable with hands-on technical work and solving real-world problems.","Build one small electronics/Arduino-style project before committing."],
+["Creative & Digital Media",["Arts / Humanities","Science","Commerce","Vocational / Other"],["creative","people","flex"],"Your answers show signals around creativity, communication and making ideas visible.","Create one small design, video, UI or content project."],
+["Finance & Professional Studies",["Commerce"],["business","logic","professional"],"You show signals for structured study, numbers and professional pathways.","Explore the actual qualification route and speak with a current student."],
+["People & Public Service",["Arts / Humanities","Commerce","Science","Vocational / Other"],["people","communication","stable"],"Your profile has a meaningful fit with people-facing work and communication.","Try teaching, volunteering or a communication-heavy activity."]
+];
+
+let A={},idx=-1;
+function app(){return document.getElementById("app")}
+function home(){app().innerHTML=`<div class="intro">
+<div class="compass">🧭</div>
+<h2>A better starting point for a big decision.</h2>
+<p class="muted">You don't need to know your dream career before starting. Answer honestly and we'll narrow the result to <b>three broad directions</b> you can actually explore.</p>
+<div class="features">
+<div class="feature"><b>01 · Understand</b><small>Interests, strengths, goals and work style.</small></div>
+<div class="feature"><b>02 · Narrow</b><small>Only your strongest directions — not 20 courses.</small></div>
+<div class="feature"><b>03 · Test</b><small>A practical next step before you commit.</small></div>
+</div>
+<button class="btn primary" onclick="idx=0;render()">Start assessment →</button>
+<div class="notice"><span>🔎</span><span><b>How it works:</b> your answers are matched using visible rules. This prototype does not claim to predict your future or guarantee a career outcome.</span></div>
+</div>`}
+function render(){
+if(idx<0)return home();
+if(idx>=Q.length)return results();
+let [k,q,o]=Q[idx],s=A[k];
+app().innerHTML=`<div class="topline"><span class="meta">CAREER ASSESSMENT</span><span class="counter">${idx+1} of ${Q.length}</span></div>
+<div class="progress"><div class="bar" style="width:${idx/Q.length*100}%"></div></div>
+<div class="question">${q}</div>
+<div class="options">${o.map((x,n)=>`<button class="opt ${s===n?'sel':''}" onclick="A['${k}']=${n};render()"><span class="letter">${String.fromCharCode(65+n)}</span><span>${x}</span></button>`).join("")}</div>
+<div class="nav"><button class="btn secondary" onclick="idx--;render()" ${idx===0?"disabled":""}>← Back</button><button class="btn primary" onclick="idx++;render()" ${s===undefined?"disabled":""}>${idx===Q.length-1?"View my directions":"Continue →"}</button></div>`;
+}
+function ans(k){let q=Q.find(x=>x[0]===k);return q?q[2][A[k]]:""}
+function all(){return Object.keys(A).map(ans).join(" ").toLowerCase()}
+function results(){
+let stream=ans("stream"),t=all();
+const M={tech:["coding","technology","computer","tech"],logic:["logic","maths","problem","logic"],business:["business","money","planning","business"],people:["people","communication","society","people"],creative:["design","writing","creativity","creative"],practical:["practical","machines","electronics","hands-on","practical"],growth:["long-term","growth","growth"],flex:["flexible","freelancing","flex"],professional:["professional","qualification","professional"],stable:["stable"]};
+let ranked=C.map(c=>{
+let score=c[1].includes(stream)?18:0,reasons=[];
+c[2].forEach(k=>{let m=M[k]||[];if(m.some(w=>t.includes(w))){score+=13;reasons.push(m[3]||m[0])}});
+return {...c,score:Math.min(96,Math.max(50,score+27)),reasons:[...new Set(reasons)].slice(0,3)};
+}).sort((a,b)=>b.score-a.score);
+let top=ranked.slice(0,3),avg=Math.round(top.reduce((a,c)=>a+c.score,0)/3);
+let confidence=avg>=78?"Strong profile fit":avg>=67?"Good profile fit":"Early profile fit";
+app().innerHTML=`<div class="results">
+<div class="topline"><span class="meta">YOUR CAREER DIRECTION</span><span class="counter">Assessment complete</span></div>
+<h2>You don't need 20 answers. You need a clear next step.</h2>
+<p class="muted">Based on your responses, these are the three areas worth exploring first.</p>
+<div class="summary"><span class="level">${confidence}</span><h3 style="margin:11px 0 5px">${top[0][0]}</h3><p class="muted" style="margin:0">Your strongest direction right now. The score is a <b>profile-fit indicator</b>, not a prediction of success.</p></div>
+${top.map((c,n)=>`<div class="result ${n===0?'best':''}">
+<div class="rhead"><span class="rank">${n===0?"01 · BEST DIRECTION":n===1?"02 · ALTERNATIVE":"03 · BACKUP DIRECTION"}</span><span style="font-weight:800;color:#315eae">${c.score}% fit</span></div>
+<h3 style="margin:10px 0 5px">${c[0]}</h3><p class="why">${c[3]}</p>
+<div class="tags">${c.reasons.map(r=>`<span class="tag">✓ ${r}</span>`).join("")}</div></div>`).join("")}
+<div class="section"><h3>Your next 7 days</h3><div class="grid">
+<div class="box"><b>01 · Explore</b><p>Read about the field and look at real beginner tasks.</p></div>
+<div class="box"><b>02 · Try</b><p>Spend 30–45 minutes doing one small task in the field.</p></div>
+<div class="box"><b>03 · Talk</b><p>Speak with one student or professional who actually does it.</p></div>
+<div class="box"><b>04 · Compare</b><p>Only then compare courses, colleges, fees and eligibility.</p></div>
+</div></div>
+<div class="section"><h3>Before making the final choice</h3><div class="box"><ul>
+<li>Check current eligibility and entrance requirements on official websites.</li>
+<li>Compare total education cost and location.</li>
+<li>Look for verified internship/placement information rather than marketing claims.</li>
+<li>Don't choose only because friends, relatives or social media recommend it.</li>
+</ul></div></div>
+<div class="note section"><b>Still confused?</b> That's not a failure. If two directions feel equally good, test both before choosing. A good career decision is allowed to take time.</div>
+<div class="actions"><button class="btn dark" onclick="A={};idx=-1;render()">↺ Take again</button><button class="btn secondary" onclick="CareerCompassCollegeFinder(top[0][0])">🏫 Find colleges for me</button><button class="btn secondary" onclick="window.print()">🖨 Save / Print</button></div>
+</div>`;
+}
+render();
+</script>
+
+<script>
+/* Career Compass V4 preserved — College Finder add-on */
+(function(){
+  const CC_STATE_OPTIONS = ["Uttar Pradesh","Delhi","Rajasthan","Maharashtra","Karnataka","Madhya Pradesh","Haryana","Gujarat","Bihar","West Bengal","Tamil Nadu","Telangana","Kerala","Punjab"];
+  const esc = x => String(x ?? "").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+
+  window.CareerCompassCollegeFinder = async function(career){
+    const existing=document.getElementById("cc-college-finder");
+    if(existing){ existing.scrollIntoView({behavior:"smooth",block:"center"}); return; }
+
+    const host=document.querySelector(".results") || document.querySelector("#app .results") || document.getElementById("app");
+    if(!host) return;
+
+    const box=document.createElement("div");
+    box.id="cc-college-finder";
+    box.className="cc-college-finder";
+    box.innerHTML=`<h3>🏫 Find real colleges for your direction</h3>
+      <p class="cc-sub">Choose your preferred state and budget. Only a few relevant options are shown to avoid confusion.</p>
+      <div class="cc-fields">
+        <select id="cc-state" class="cc-field"><option value="">Select preferred state</option>${CC_STATE_OPTIONS.map(x=>`<option>${x}</option>`).join("")}</select>
+        <select id="cc-budget" class="cc-field"><option value="low">Budget Friendly</option><option value="mid">Moderate Budget</option><option value="any">Any Budget</option></select>
+      </div>
+      <button class="btn primary cc-find" id="cc-find">Find colleges →</button>
+      <div id="cc-college-results"></div>`;
+    host.appendChild(box);
+    box.scrollIntoView({behavior:"smooth",block:"center"});
+
+    document.getElementById("cc-find").onclick=async()=>{
+      const state=document.getElementById("cc-state").value;
+      const budget=document.getElementById("cc-budget").value;
+      const out=document.getElementById("cc-college-results");
+      if(!state){out.innerHTML='<div class="cc-note">Please select a state first.</div>';return}
+      out.innerHTML='<p class="cc-sub" style="margin-top:14px">Finding colleges…</p>';
+      try{
+        const r=await fetch("data/colleges.json",{cache:"no-store"});
+        if(!r.ok) throw new Error("data unavailable");
+        const all=await r.json();
+        let list=all.filter(c=>String(c.state||"").toLowerCase()===state.toLowerCase() && c.fee!=null);
+
+        const key=String(career||"").toLowerCase();
+        const keys=key.includes("technology")?["iit","nit","iiit","engineering","technology","computer","electronics"]:
+          key.includes("business")?["iim","business","management","university"]:
+          key.includes("finance")?["commerce","business","management","university"]:
+          key.includes("creative")?["media","design","arts","fashion","university"]:
+          key.includes("people")?["university","arts","government","college"]:[];
+        const relevant=list.filter(c=>keys.some(k=>(String(c.name)+" "+String(c.type)).toLowerCase().includes(k)));
+        if(relevant.length>=3) list=relevant;
+        list.sort((a,b)=>budget==="low"?(a.fee-b.fee):((b.rating||0)-(a.rating||0)));
+        list=list.slice(0,3);
+
+        out.innerHTML=list.length?list.map((c,i)=>`<div class="cc-college">
+          <span class="cc-chip">${i===0?"Recommended":budget==="low"?"Budget-friendly":"College option"}</span>
+          <h4>${esc(c.name)}</h4>
+          <div class="cc-meta">${esc(c.city)} · ${esc(c.state)} · ${esc(c.type)}</div>
+          <div class="cc-chips">
+            <span class="cc-chip">UG fee estimate: ₹${Number(c.fee).toLocaleString("en-IN")}</span>
+            ${c.rating?`<span class="cc-chip">Rating ${esc(c.rating)}</span>`:""}
+            ${c.nirf?`<span class="cc-chip">NIRF #${esc(c.nirf)}</span>`:""}
+          </div>
+        </div>`).join("") :
+        '<div class="cc-note">No suitable colleges found for this state in the bundled dataset. Try another state.</div>';
+        out.innerHTML += '<div class="cc-note">Fee figures are dataset estimates, not live official fee quotes. Verify current fees, course availability, recognition and admissions on the official college website.</div>';
+      }catch(e){
+        out.innerHTML='<div class="cc-note">College data could not be loaded. The career assessment itself is still available.</div>';
+      }
+    };
+  };
+})();
+</script>
+</body>
+</html>
