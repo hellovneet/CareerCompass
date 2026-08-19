@@ -1,5 +1,4 @@
-# Career Compass V5 — FIXED Vercel Deploy
-
+# Career Compass V5 
 Developer: Vineet Sharma
 
 ## The Vercel error shown in the screenshot
